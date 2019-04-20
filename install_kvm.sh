@@ -1,6 +1,7 @@
 set -x
 
 sudo apt-get update
+sudo apt-get install -y numactl
 sudo apt-get install -y qemu-kvm libvirt-bin ubuntu-vm-builder
 bridge-utils virt-manager libosinfo-bin libguestfs-tools virt-top
 sudo adduser `id -un` libvirt
