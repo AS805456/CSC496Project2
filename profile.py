@@ -35,7 +35,7 @@ for i in range(5):
   node.ram = 4096
   node.routable_control_ip = "true"
  
-  node.disk_image = "https://www.utah.cloudlab.us/image_metadata.php?uuid=89e6d902-cd87-11e4-9fb8-3548323d6d11"
+  node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:CENTOS7-64-STD"
   
   iface = node.addInterface("if" + str(i))
   iface.component_id = "eth1"
