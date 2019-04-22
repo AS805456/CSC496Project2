@@ -103,5 +103,4 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-
 .*.sw[a-zA-z0-9]
