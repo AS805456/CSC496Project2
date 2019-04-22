@@ -44,7 +44,7 @@ for i in range(5):
   link.addInterface(iface)
   
   node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/passwordless.sh"))
-  node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/install_kvm.sh"))
+  node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/install_singularity.sh"))
   node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/install_linpack.sh"))
   
   
