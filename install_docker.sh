@@ -11,4 +11,4 @@ sudo apt-get install -y httping
 sudo apt-get install -y jq
 
 # the username needs to be changed
-sudo usermod -aG docker pro2
+sudo usermod -aG docker am852248
