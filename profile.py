@@ -13,7 +13,7 @@ request = pc.makeRequestRSpec()
 
 tourDescription = \
 """
-This profile provides the template for a compute node with Docker installed on Ubuntu 18.04
+This profile provides the template for a compute node with Singularity installed on Ubuntu 16.04
 """
 
 #
@@ -45,7 +45,6 @@ for i in range(5):
   
   node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/passwordless.sh"))
   node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/install_singularity.sh"))
-  node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/install_linpack.sh"))
   
   
 # Print the RSpec to the enclosing page.
