@@ -8,8 +8,5 @@ cd singularity-2.4
 ./configure --prefix=/usr/local
 make
 sudo make install
-
-#Attempting to build a container
-singularity create test.img
-sudo singularity build test.img
-singularity shell test.img
+. etc/bash_completion.d/singularity
+sudo cp etc/bash_completion.d/singularity /etc/bash_completion.d/
