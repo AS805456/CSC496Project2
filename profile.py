@@ -13,6 +13,7 @@ request = pc.makeRequestRSpec()
 
 tourDescription = \
 """
+Used to run KVM
 """
 
 #
