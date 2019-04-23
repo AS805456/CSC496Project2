@@ -13,9 +13,3 @@ sudo apt-get install -y jq
 
 # the username needs to be changed
 sudo usermod -aG docker am852248
-
-#test for linpack install
-git clone https://github.com/ereyes01/linpack.git
-cd linpack
-sudo docker build -t linpack ./
-#sudo docker run -it --rm linpack
