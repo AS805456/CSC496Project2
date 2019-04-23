@@ -3,8 +3,9 @@ set -x
 sudo apt-get update
 sudo apt-get install -y numactl
 sudo apt-get install -y qemu-kvm libvirt-bin ubuntu-vm-builder
+#This line does not work
 bridge-utils virt-manager libosinfo-bin libguestfs-tools virt-top
-#Replac 'ud -un' with your id
+#Replace 'ud -un' with your id
 sudo adduser `id -un` libvirtd
 wget http://releases.ubuntu.com/16.04/ubuntu-16.04.6-server-amd64.iso
 qemu-img create -f qcow2 ubuntu.qcow2 20G
