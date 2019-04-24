@@ -5,8 +5,8 @@ apt-get update
 apt-get install -y numactl
 apt-get install -y qemu-kvm libvirt-bin ubuntu-vm-builder
 #This line does not work: bridge-utils virt-manager libosinfo-bin libguestfs-tools virt-top
-#Replace 'ud -un' with your id
-sudo adduser group14 libvirtd
+#Replace 'id -un' with your id
+sudo adduser 'id -un' libvirtd
 wget http://releases.ubuntu.com/16.04/ubuntu-16.04.6-server-amd64.iso
 qemu-img create -f qcow2 ubuntu.qcow2 20G
 virt-install --name test --connect qemu:///system --ram 1024 --disk path=ubuntu.qcow2 --vcpus 8 --os-type linux --network network=default --graphics none --console pty --location=ubuntu-16.04.6-server-amd64.iso --extra-args 'console=ttyS0,115200n8 serial'
