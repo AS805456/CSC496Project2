@@ -27,7 +27,7 @@ prefixForIP = "192.168.1."
 
 link = request.LAN("lan")
 
-node = request.rawPC("head")
+node = request.RawPC("head")
 
 node.cores = 4
 node.ram = 16384
