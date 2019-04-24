@@ -27,26 +27,23 @@ prefixForIP = "192.168.1."
 
 link = request.LAN("lan")
 
-for i in range(5):
-  if i == 0:
-    node = request.XenVM("head")
-  else:
-    node = request.XenVM("worker-" + str(i))
-  node.cores = 4
-  node.ram = 4096
-  node.disk = 8
-  node.routable_control_ip = "true"
+node = request.rawPC("head")
+
+node.cores = 4
+node.ram = 16384
+node.disk = 8
+node.routable_control_ip = "true"
  
-  node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU16-64-STD"
+node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU16-64-STD"
   
-  iface = node.addInterface("if" + str(i))
-  iface.component_id = "eth1"
-  iface.addAddress(pg.IPv4Address(prefixForIP + str(i + 1), "255.255.255.0"))
-  link.addInterface(iface)
+iface = node.addInterface("if" + str(i))
+iface.component_id = "eth1"
+iface.addAddress(pg.IPv4Address(prefixForIP + str(i + 1), "255.255.255.0"))
+link.addInterface(iface)
   
-  node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/passwordless.sh"))
-  node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/install_docker.sh"))
-  node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/install_linpack.sh"))
+node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/passwordless.sh"))
+node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/install_docker.sh"))
+node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/install_linpack.sh"))
   
 # Print the RSpec to the enclosing page.
 pc.printRequestRSpec(request)
