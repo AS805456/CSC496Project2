@@ -3,6 +3,7 @@ set -x
 sudo su
 apt-get update
 apt-get install -y numactl
+apt install virtinst
 apt-get install -y qemu-kvm libvirt-bin ubuntu-vm-builder
 #This line does not work: bridge-utils virt-manager libosinfo-bin libguestfs-tools virt-top
 #Replace 'id -un' with your id
