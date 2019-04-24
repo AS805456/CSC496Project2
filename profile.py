@@ -36,9 +36,9 @@ node.routable_control_ip = "true"
  
 node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU16-64-STD"
   
-iface = node.addInterface("if")
+iface = node.addInterface("if" + str(0))
 iface.component_id = "eth1"
-iface.addAddress(pg.IPv4Address(prefixForIP, "255.255.255.0"))
+iface.addAddress(pg.IPv4Address(prefixForIP + str(0), "255.255.255.0"))
 link.addInterface(iface)
   
 node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/passwordless.sh"))
