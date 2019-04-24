@@ -34,7 +34,7 @@ node.routable_control_ip = "true"
  
 node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU16-64-STD"
   
-iface = node.addInterface("if" + str(i))
+iface = node.addInterface("if")
 iface.component_id = "eth1"
 iface.addAddress(pg.IPv4Address(prefixForIP + str(i + 1), "255.255.255.0"))
 link.addInterface(iface)
