@@ -29,6 +29,8 @@ link = request.LAN("lan")
 
 node = request.RawPC("head")
 
+node.hardware_type = "c8820"
+
 node.cores = 4
 node.ram = 16384
 node.disk = 8
