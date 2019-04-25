@@ -1,7 +1,7 @@
-sudo su
-singularity pull docker://godlovedc/easybuild 
-singularity run docker://godlovedc/easybuild 
-git clone -b docker --single-branch https://github.com/AS805456/cluster-template
-cd cluster-template
-#docker build -t linpack ./
-#docker run -it --rm linpack
+singularity build contain docker://godlovedc/easybuild
+singularity shell contain
+wget http://registrationcenter-download.intel.com/akdlm/irc_nas/2169/l
+_lpk_p_10.3.4.007.tgz
+tar zxvf l_lpk_p_10.3.4.007.tgz
+cd linpack_10.3.4/benchmarks/linpack
+./xlinpack_xeon64 #or ./xlinpack_xeon32
