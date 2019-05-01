@@ -9,4 +9,4 @@ Team members:
 Project selection:
   Performance Evaluation
 
-Benchmarks: Linpack, RandomAccess
+Benchmarks: Linpack, Stream
