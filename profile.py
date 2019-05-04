@@ -39,7 +39,7 @@ iface.component_id = "eth1"
 iface.addAddress(pg.IPv4Address(prefixForIP + str(0), "255.255.255.0"))
 link.addInterface(iface)
   
-node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/passwordless.sh"))
+
 #node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/install_kvm.sh"))
 node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/install_linpack.sh"))
   
