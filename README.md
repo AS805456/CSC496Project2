@@ -1,6 +1,7 @@
 To run Linpack, run the following commands:
 
 sudo bash /local/repository/linpack/install_linpack.sh
+
 sudo docker run -i -t --rm --privileged linpack
 
 Run the benchmark with manual input for parameters.
@@ -16,6 +17,7 @@ Data alignment alue (in Kbytes): 1
 To run Stream, run the following commands:
 
 sudo bash /local/repository/Stream/install_stream.sh
+
 sudo docker run --rm --privileged stream
 
 -----------------------------------------------------------------
