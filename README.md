@@ -13,7 +13,7 @@ Leading dimension of array: 45000
 
 Number of trials to run: 10
 
-Data alignment alue (in Kbytes): 1
+Data alignment value (in Kbytes): 1
 
 
 ----------------------------------------------------------------
