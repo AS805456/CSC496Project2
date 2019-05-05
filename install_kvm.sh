@@ -9,7 +9,7 @@ sudo git clone -b kvm --single-branch https://github.com/AS805456/cluster-templa
 sudo virt-install --name test \
 --connect qemu:///system \
 --ram 16384 \
---disk path=ubuntu.qcow2 \
+--disk path=ubuntu.qcow2,bus=virtio,size=8 \
 --vcpus 16 \
 --os-type linux \
 --network network=default \
