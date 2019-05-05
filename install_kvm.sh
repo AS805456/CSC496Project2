@@ -5,6 +5,7 @@ sudo apt-get install -y qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils virt
 sudo adduser `id -un` libvirtd
 sudo wget http://releases.ubuntu.com/16.04/ubuntu-16.04.6-server-amd64.iso
 sudo qemu-img create -f qcow2 ubuntu.qcow2 20G
+sudo git clone -b kvm --single-branch https://github.com/AS805456/cluster-template
 sudo virt-install --name test \
 --connect qemu:///system \
 --ram 16384 \
