@@ -14,7 +14,6 @@ sudo virt-install --name test \
 --os-type linux \
 --network network=default \
 --graphics none \
---console pty,target_type=serial \
 --location=ubuntu-16.04.6-server-amd64.iso \
 --initrd-inject cluster-template/Kickstarter.cfg \
 --extra-args='ks=file:/Kickstarter.cfg console=ttyS0'
