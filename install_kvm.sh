@@ -13,7 +13,7 @@ sudo virt-install --name test \
 --vcpus 16 \
 --os-type linux \
 --network network=default \
---graphics none \
+--graphics vnc,password=foo \
 --console pty,target_type=serial \
 --location=ubuntu-16.04.6-server-amd64.iso \
 --initrd-inject cluster-template/Kickstarter.cfg \
