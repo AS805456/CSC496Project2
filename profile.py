@@ -29,8 +29,8 @@ link = request.LAN("lan")
 
 node = request.XenVM("head")
 
-node.cores = 8
-node.ram = 262144
+node.cores = 12
+node.ram = 65536
 node.disk = 8
 node.routable_control_ip = "true"
  
