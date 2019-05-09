@@ -42,8 +42,8 @@ iface.addAddress(pg.IPv4Address(prefixForIP + str(0), "255.255.255.0"))
 link.addInterface(iface)
   
 node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/install_docker.sh"))
-node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/install_linpack.sh"))
-node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/install_stream.sh"))
+node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/linpack/install_linpack.sh"))
+node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/Stream/install_stream.sh"))
   
 # Print the RSpec to the enclosing page.
 pc.printRequestRSpec(request)
