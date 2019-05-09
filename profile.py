@@ -27,11 +27,9 @@ prefixForIP = "192.168.1."
 
 link = request.LAN("lan")
 
-node = request.XenVM("head")
+node = request.RawPC("head")
+node.hardware_type = "c220g2"
 
-node.cores = 12
-node.ram = 65536
-node.disk = 8
 node.routable_control_ip = "true"
  
 node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU16-64-STD"
