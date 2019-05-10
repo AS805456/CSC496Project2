@@ -39,6 +39,8 @@ iface.addAddress(pg.IPv4Address(prefixForIP + str(1), "255.255.255.0"))
 link.addInterface(iface)
   
 node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/install_singularity.sh"))
+node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/Stream/install_stream.sh"))
+
   
   
 # Print the RSpec to the enclosing page.
