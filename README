@@ -1,4 +1,10 @@
-To run Linpack, run:
+How to use:
+
+Instantiate the Docker branch using this GitHub repository on Cloudlab.
+
+------------------------------------------------------------------
+
+To run Linpack, execute the following:
 
 sudo docker run -it --rm --privileged linpack
 
