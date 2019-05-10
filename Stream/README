@@ -1,0 +1,6 @@
+To run Stream, execute Singularity contain and then enter the following commands:
+git clone -b singularity --single-branch https://github.com/AS805456/cluster-template
+cd cluster-template/stream
+make
+cd bin
+./stream.exe
