@@ -4,9 +4,7 @@ singularity build contain docker://godlovedc/easybuild
 
 singularity shell contain
 
-wget http://registrationcenter-download.intel.com/akdlm/irc_nas/2169/l
-
-_lpk_p_10.3.4.007.tgz
+wget http://registrationcenter-download.intel.com/akdlm/irc_nas/2169/l_lpk_p_10.3.4.007.tgz
 
 tar zxvf l_lpk_p_10.3.4.007.tgz
 
